@@ -7,7 +7,7 @@ Los requerimientos de la aplicación es dínamica, osea que no podemos usar:
 
 varnish.
 
-La estratigia es escalar horizontalmente, agregando nodos hijos de un nodo central
+La estrategía es escalar horizontalmente, agregando nodos hijos de un nodo central
 
 El cual consiste en tecnicas:
 
