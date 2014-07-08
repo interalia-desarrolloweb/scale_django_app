@@ -9,11 +9,13 @@ Welcome to Como escalar una aplicación django's documentation!
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    intro   
    DNS
    separar
+   provisioning
+   arch
 
 
 Indices and tables

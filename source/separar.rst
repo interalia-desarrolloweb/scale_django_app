@@ -38,18 +38,31 @@ Server 2 hasta N tendrian una configuracion de BD hacia server-1 y compartir la 
 Consideraciones
 ===============
 
-*DNS*
+server-1 es el nodo madre, si el server-1 cambia de configuracion entonces server-2,3,4 ..n deben cambiar tambien.
 
-server-1 es el nodo madre, si el server-1 cambia de configuracion entonces server-2,3,4 ..n deben cambiar tmb.  
+*Django*
+
+La aplicación debe tener una configuración de BD que apunte al nodo1
+
+*DNS*
 
 Por eso: el DNS de round robin debe apuntar a todos los servers con excepcion de server-1
 
 *NFS*
+
 La aplicación se debe de poner un directorio, los archivos estaticos en otro. Todo por nfs, 
 
 
 *Network*
+
 Lo ideal es que los servers nodos esten dentro de la misma red, asi atravez de una ip privada de redlocal puedan comunicarse por nfs.
+
+*Uwsgi*
+
+Si hay un cambio de archivos en python, uwsgi debe reiniciarse automaticamente, esto lo hace atravez del touch-reload[1]. 
+Al hacer el cambio en el nodo central el cambio se propagara por nfs.
+
+[1]: http://uwsgi-docs.readthedocs.org/en/latest/Management.html#reloading-the-server
 
 
 Riesgos en server-1
