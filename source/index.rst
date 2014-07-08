@@ -12,17 +12,5 @@ Contents:
    :maxdepth: 1
 
    intro   
-   DNS
-   separar
-   provisioning
-   extra
-   arch
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
 
