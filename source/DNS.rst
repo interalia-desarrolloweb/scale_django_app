@@ -5,7 +5,7 @@ El primer paso para escalar es configurar el dns con roundrobin
 
 Esto quiere decir que se apuntara el dominio a varias IP cada una por server.
 Lo que hara es que cada vez que se resuelva la dirección ip de un dominio podra dar 
-alguno registro alterno de
+alguno registro alterno.
 
 .. code-block:: bash
 
@@ -37,3 +37,8 @@ Este es un ejemplo de un dns de roundrobin, existe 2 registros A para midominio.
 Cuando el browser resuelva el dominio puede resolver la ip 19 o la ip 18.
 
 Ahora lo que sigue es instalar la aplicación en las ips.
+
+Consideraciones
+===============
+
+El registro de ttl del dominio debe ser minimo para que la propagación de cambios en dns sea minima.

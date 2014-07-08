@@ -3,6 +3,11 @@ Introducción
 
 Este documento propone una forma de realizar una aplicación django pueda ser escalable horizontalmente.
 
+Los requerimientos de la aplicación es dínamica, osea que no podemos usar:
+
+varnish.
+
+La estratigia es escalar horizontalmente, agregando nodos hijos de un nodo central
 
 El cual consiste en tecnicas:
 
